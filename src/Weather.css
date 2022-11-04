@@ -15,6 +15,10 @@ button {
   border-radius: 5px;
 }
 
+.wrapper a {
+  color: black;
+}
+
 .wrapper {
   border: 1px solid #dad7d7;
   border-radius: 20px;
