@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 import "./Weather.css";
 import icon from "./images/location_icon.png";
 
@@ -11,7 +13,7 @@ function Weather() {
       ready: true,
       temperature: response.data.temperature.current,
       humidity: response.data.temperature.humidity,
-      date: "Wednesday 2/11/2022 14:54",
+      date: new Date(response.data.time * 1000),
       description: response.data.condition.description,
       iconUrl:
         "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/shower-rain-day.png",
@@ -24,7 +26,9 @@ function Weather() {
     return (
       <div className="wrapper">
         <h1>Weather Application</h1>
-        <p className="current-time-details">{weatherData.date}</p>
+        <p className="current-time-details">
+          <FormattedDate date={weatherData.date} />
+        </p>
         <form>
           <input type="search" className="col-8" />
           <input type="submit" value="Search" className="button-search col-2" />
@@ -33,28 +37,7 @@ function Weather() {
           </button>
         </form>
         <hr />
-        <div className="container text-center location-div">
-          <div className="row">
-            <div className="col-8">
-              <h2>{weatherData.city}</h2>
-              <p>
-                Humidity {Math.round(weatherData.humidity)} % | Wind{" "}
-                {Math.round(weatherData.wind)} km/h | {weatherData.description}
-              </p>
-            </div>
-            <div className="col-4">
-              <img
-                src={weatherData.iconUrl}
-                alt="current weather icon"
-                className="weather-icon"
-              />
-              <span className="temperature">
-                {Math.round(weatherData.temperature)}
-              </span>
-              <span className="units"> °C</span>
-            </div>
-          </div>
-        </div>
+        <WeatherInfo data={weatherData} />
         <hr />
       </div>
     );
