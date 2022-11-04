@@ -9,9 +9,13 @@ function App() {
       </div>
       <footer>
         This site was coded by{" "}
-        <a href="https://www.linkedin.com/in/wiebkerichter/">Wiebke Richter</a>,
-        it´s open-sorced on{" "}
-        <a href="https://github.com/wiebkerichter">GitHub</a>
+        <a href="https://www.linkedin.com/in/wiebkerichter/" target="_blank">
+          Wiebke Richter
+        </a>
+        , it´s open-sorced on{" "}
+        <a href="https://github.com/wiebkerichter" target="_blank">
+          GitHub
+        </a>
       </footer>
     </div>
   );
