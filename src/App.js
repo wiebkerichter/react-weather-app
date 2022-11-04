@@ -23,8 +23,8 @@ function App() {
           rel="noreferrer"
         >
           GitHub
-        </a>
-        and hosted on
+        </a>{" "}
+        and hosted on{" "}
         <a
           href="https://storied-fox-c9153c.netlify.app/"
           target="_blank"
@@ -32,6 +32,7 @@ function App() {
         >
           Netlify
         </a>
+        .
       </footer>
     </div>
   );
