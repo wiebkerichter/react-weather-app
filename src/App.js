@@ -24,6 +24,14 @@ function App() {
         >
           GitHub
         </a>
+        and hosted on
+        <a
+          href="https://storied-fox-c9153c.netlify.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Netlify
+        </a>
       </footer>
     </div>
   );
