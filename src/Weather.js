@@ -20,6 +20,7 @@ function Weather(props) {
       iconUrl: response.data.condition.icon_url,
       wind: response.data.wind.speed,
       city: response.data.city,
+      coordinates: response.data.coordinates,
     });
   }
 
@@ -43,15 +44,15 @@ function Weather(props) {
     return (
       <div className="wrapper">
         <h1>Weather Application</h1>
-        <p className="current-time-details">
+        <div className="current-time-details">
           <FormattedDate date={weatherData.date} />
-        </p>
+        </div>
         <form onSubmit={handleSubmit}>
           <input
             type="search"
             className="col-8"
             placeholder="Type a city..."
-            autofocus="on"
+            autoFocus="on"
             onChange={updateCity}
           />
           <input type="submit" value="Search" className="button-search col-2" />

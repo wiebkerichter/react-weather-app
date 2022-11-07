@@ -26,7 +26,9 @@ function FormattedDate(props) {
   let year = props.date.getFullYear();
   return (
     <div>
-      {day} {date}/{month}/{year} {hours}:{minutes}
+      <p>
+        {day} {date}/{month}/{year} {hours}:{minutes}
+      </p>
     </div>
   );
 }
