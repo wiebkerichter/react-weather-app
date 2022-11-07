@@ -1,0 +1,17 @@
+.WeatherForecast h3 {
+  margin: 0 0 -5px 0;
+  font-size: 20px;
+}
+
+.WeatherForecast-temp-min {
+  opacity: 0.6;
+  margin-left: 5px;
+  font-size: 14px;
+}
+.WeatherForecast-temp-max {
+  font-size: 14px;
+}
+
+.WeatherForecast-icon {
+  width: 55px;
+}
