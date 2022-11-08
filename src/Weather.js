@@ -4,7 +4,6 @@ import FormattedDate from "./FormattedDate";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
 import "./Weather.css";
-import icon from "./images/location_icon.png";
 
 function Weather(props) {
   let [weatherData, setWeatherData] = useState({ ready: false });
@@ -50,15 +49,12 @@ function Weather(props) {
         <form onSubmit={handleSubmit}>
           <input
             type="search"
-            className="col-8"
+            className="col-9"
             placeholder="Type a city..."
             autoFocus="on"
             onChange={updateCity}
           />
-          <input type="submit" value="Search" className="button-search col-2" />
-          <button className="button-location col-1">
-            <img src={icon} alt="location icon" className="location-icon" />
-          </button>
+          <input type="submit" value="Search" className="button-search col-3" />
         </form>
         <hr />
         <WeatherInfo data={weatherData} />
