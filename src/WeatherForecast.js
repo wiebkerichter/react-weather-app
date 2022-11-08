@@ -28,6 +28,7 @@ function WeatherForecast(props) {
                 </div>
               );
             }
+            return null;
           })}
         </div>
       </div>
@@ -40,7 +41,7 @@ function WeatherForecast(props) {
 
     axios.get(apiUrl).then(handleResponse);
 
-    return <p>Loading forecast data for {props.data.city}</p>;
+    return null;
   }
 }
 
